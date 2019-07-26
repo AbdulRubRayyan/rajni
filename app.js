@@ -1,11 +1,11 @@
 document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
 function getJokes(e) {
-    const number = document.getElementById('numberofjokes').value;
+    const number = 1;
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', `https://api.icndb.com/jokes/random/${number}?lastName=Kanth&firstName=Rajni`, true);
+    xhr.open('GET', `https://api.icndb.com/jokes/random/${number}?lastName=Kanth&firstName=Rajni&limitTo=[nerdy]`, true);
 
     xhr.onload = function() {
         if(this.status === 200) {
