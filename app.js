@@ -2,6 +2,8 @@ document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
 function getJokes(e) {
     const number = 1;
+    
+    
 
     const xhr = new XMLHttpRequest();
 
@@ -11,11 +13,14 @@ function getJokes(e) {
         if(this.status === 200) {
             const response = JSON.parse(this.responseText);
             
+            
             let output = '';
             if (response.type === 'success'){
+                document.getElementById('get-button').innerHTML = "ANOTHER JOKE";
                 response.value.forEach(function(joke) {
-                    output += `<li>${joke.joke}</li>`;
+                    output += `${joke.joke}`;
                 });
+                
             } else {
                 output += '<li>Something went wrong</li>';
             }
