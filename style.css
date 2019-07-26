@@ -11,7 +11,7 @@
 .jokes {
     margin: 20px 0;
     font-family: 'IBM Plex Sans';
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 body {
@@ -39,4 +39,5 @@ button:focus{
 
 h2 {
     font-family: 'Patua One';
+    font-size: 2rem;
 }
